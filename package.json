@@ -1,0 +1,38 @@
+{
+  "name": "fixed-width-string",
+  "version": "1.0.0",
+  "description": "Terminal ANSI-aware string fit to fixed width",
+  "license": "MIT",
+  "repository": "lahmatiy/fixed-width-string",
+  "author": "Roman Dvornov <rdvornov@gmail.com>",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "string",
+    "text",
+    "padding",
+    "truncate",
+    "align",
+    "ellipsis",
+    "width",
+    "formatting",
+    "terminal",
+    "cli",
+    "console",
+    "ansi",
+    "color"
+  ],
+  "devDependencies": {
+    "chalk": "*",
+    "strip-ansi": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
