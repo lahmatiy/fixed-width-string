@@ -42,8 +42,6 @@ console.log(fixedWidthString(chalk.green('hello') + ' ' + chalk.red('world'), 8)
 fixedWidthString(str, width[, options])
 ```
 
-Where:
-
 ### options.padding
 
 String to padding with.
