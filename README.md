@@ -1,5 +1,5 @@
 [![NPM version](https://img.shields.io/npm/v/fixed-width-string.svg)](https://www.npmjs.com/package/fixed-width-string)
-[![Build Status](https://travis-ci.org/basisjs/fixed-width-string.svg?branch=master)](https://travis-ci.org/basisjs/fixed-width-string)
+[![Build Status](https://travis-ci.org/lahmatiy/fixed-width-string.svg?branch=master)](https://travis-ci.org/lahmatiy/fixed-width-string)
 
 Terminal ANSI-aware string fit to fixed width:
 
