@@ -1,16 +1,18 @@
 [![NPM version](https://img.shields.io/npm/v/fixed-width-string.svg)](https://www.npmjs.com/package/fixed-width-string)
 [![Build Status](https://travis-ci.org/lahmatiy/fixed-width-string.svg?branch=master)](https://travis-ci.org/lahmatiy/fixed-width-string)
 
-Terminal ANSI-aware string fit to fixed width:
+Fit a string to the fixed width (length) with aware of [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).
 
-- pad or truncate string if needed
-- align string
-- ANSI-aware (works right with colored strings)
+Features:
+
+- Works well with strings with ANSI escape codes, i.e strings styled with a lib like [chalk](https://github.com/chalk/chalk)
+- Pad or truncate string if needed
+- Align string
 
 ## Install
 
 ```
-$ npm install --save fixed-width-string
+$ npm install fixed-width-string
 ```
 
 ## Usage
@@ -46,7 +48,7 @@ fixedWidthString(str, width[, options])
 
 String to padding with.
 
-Default: ` ` (one space)
+Default: `' '` (one space)
 
 ```js
 console.log(fixedWidthString('test', 10));
@@ -60,9 +62,8 @@ console.log(fixedWidthString('test', 10, { padding: '.' }));
 
 Side to align.
 
-Values: `left` or `right`
-
-Default: `left`
+Values: `'left'` or `'right'`  
+Default: `'left'`
 
 ```js
 console.log(fixedWidthString('test', 10));
@@ -74,9 +75,11 @@ console.log(fixedWidthString('test', 10, { align: 'right' }));
 
 ### options.ellipsis
 
-String to be placed when string trancate.
+String to be placed when string is truncating.
 
-Default: `…`
+Default: `'…'`
+
+> Note: To omit ellipsis, pass an empty string or falsy value for the option.
 
 ```js
 console.log(fixedWidthString('hello world', 8));
@@ -87,15 +90,17 @@ console.log(fixedWidthString('hello world', 8, { ellipsis: '~' }));
 
 console.log(fixedWidthString('hello world', 8, { ellipsis: '...', align: 'right' }));
 // "...world"
+
+console.log(fixedWidthString('hello world', 8, { ellipsis: false, align: 'right' }));
+// "lo world"
 ```
 
 ### options.truncate
 
 Side should be truncated.
 
-Values: `left` or `right`
-
-Default: `right` when `align: 'left'` or `left` when `align: 'right'`
+Values: `'left'` or `'right'`  
+Default: `'right'` when `align: 'left'` or `'left'` when `align: 'right'`
 
 ```js
 console.log(fixedWidthString('hello world', 8));
@@ -113,4 +118,4 @@ console.log(fixedWidthString('hello world', 8, { align: 'right', truncate: 'left
 
 ## License
 
-MIT © Roman Dvornov
+MIT
