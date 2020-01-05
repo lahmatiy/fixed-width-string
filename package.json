@@ -1,6 +1,6 @@
 {
   "name": "fixed-width-string",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Terminal ANSI-aware string fit to fixed width",
   "license": "MIT",
   "repository": "lahmatiy/fixed-width-string",
