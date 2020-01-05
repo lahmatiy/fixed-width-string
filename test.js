@@ -35,6 +35,14 @@ describe('truncate', function(){
   it('should truncate with specified ellipsis string', function(){
     assert(fixedWidth('hello world', 8, { ellipsis: '...' }) === 'hello...');
   });
+
+  it('should truncate with no ellipsis when passed an empty string', function(){
+    assert(fixedWidth('hello world', 8, { ellipsis: '' }) === 'hello wo');
+  });
+
+  it('should truncate with no ellipsis when passed a falsy value', function(){
+    assert(fixedWidth('hello world', 8, { ellipsis: false }) === 'hello wo');
+  });
 });
 
 describe('fit to width colored string', function(){

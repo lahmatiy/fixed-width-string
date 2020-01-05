@@ -46,7 +46,9 @@ module.exports = function fixedWidthString(str, width, options){
   }
 
   var parts = str.split(ANSI_REGEXP);
-  var ellipsis = options.ellipsis === undefined ? '\u2026' : options.ellipsis;  // '…'
+  var ellipsis = typeof options.ellipsis === 'string'
+    ? options.ellipsis
+    : ('ellipsis' in options === false || options.ellipsis ? '\u2026' : '');  // '\u2026' === '…'
   var ellipsisWoAnsi = stripAnsi(ellipsis);
   var result = '';
 
