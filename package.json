@@ -28,9 +28,9 @@
     "color"
   ],
   "devDependencies": {
-    "chalk": "*",
-    "strip-ansi": "*",
-    "mocha": "*"
+    "chalk": "^3.0.0",
+    "strip-ansi": "^6.0.0",
+    "mocha": "^7.0.0"
   },
   "scripts": {
     "test": "mocha"
