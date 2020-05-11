@@ -3,6 +3,6 @@ declare module 'fixed-width-string' {
     padding?: string;
     align?: 'left' | 'right';
     ellipsis?: string | false | null;
-    truncate?: string;
+    truncate?: 'left' | 'right';
   }): string;
 }
