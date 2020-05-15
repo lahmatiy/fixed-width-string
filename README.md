@@ -1,5 +1,7 @@
 [![NPM version](https://img.shields.io/npm/v/fixed-width-string.svg)](https://www.npmjs.com/package/fixed-width-string)
 [![Build Status](https://travis-ci.org/lahmatiy/fixed-width-string.svg?branch=master)](https://travis-ci.org/lahmatiy/fixed-width-string)
+[![Coverage Status](https://coveralls.io/repos/github/lahmatiy/fixed-width-string/badge.svg?branch=master)](https://coveralls.io/github/lahmatiy/fixed-width-string?branch=master)
+
 
 Fit a string to the fixed width (length) with aware of [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).
 
