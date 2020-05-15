@@ -1,9 +1,5 @@
 const ANSI_REGEXP = /([\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><])/g;
 
-function repeatStr(str, len) {
-    return new Array(parseInt(len) + 1).join(str);
-}
-
 function stripAnsi(str) {
     return str.replace(ANSI_REGEXP, '');
 }
@@ -29,7 +25,7 @@ module.exports = function fixedWidthString(str, width, options) {
     if (strWoAnsi.length <= width) {
         const paddingWidth = Math.max(width - strWoAnsi.length, 0);
         const paddingString = options.padding ? fixedWidthString(options.padding, 1, { ellipsis: '' }) : ' ';
-        const padding = repeatStr(paddingString, paddingWidth);
+        const padding = paddingString.repeat(paddingWidth);
 
         return options.align == 'right'
             ? padding + str
