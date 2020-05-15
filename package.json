@@ -1,46 +1,47 @@
 {
-  "name": "fixed-width-string",
-  "version": "1.1.0",
-  "description": "Terminal ANSI-aware string fit to fixed width",
-  "license": "MIT",
-  "repository": "lahmatiy/fixed-width-string",
-  "author": "Roman Dvornov <rdvornov@gmail.com>",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "main": "./index.js",
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "string",
-    "text",
-    "padding",
-    "truncate",
-    "align",
-    "ellipsis",
-    "width",
-    "formatting",
-    "terminal",
-    "cli",
-    "console",
-    "ansi",
-    "color"
-  ],
-  "devDependencies": {
-    "chalk": "^3.0.0",
-    "coveralls": "^3.0.11",
-    "eslint": "^7.0.0",
-    "mocha": "^7.0.0",
-    "nyc": "^14.1.0",
-    "strip-ansi": "^6.0.0"
-  },
-  "scripts": {
-    "lint": "eslint *.js",
-    "lint-and-test": "npm run lint && npm test",
-    "test": "mocha --reporter ${REPORTER:-progress}",
-    "coverage": "nyc npm test",
-    "travis": "nyc npm run lint-and-test && npm run coveralls",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
-  }
+    "name": "fixed-width-string",
+    "version": "1.1.0",
+    "description": "Terminal ANSI-aware string fit to fixed width",
+    "license": "MIT",
+    "repository": "lahmatiy/fixed-width-string",
+    "author": "Roman Dvornov <rdvornov@gmail.com>",
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "main": "./index.js",
+    "files": [
+        "index.d.ts",
+        "index.js"
+    ],
+    "keywords": [
+        "string",
+        "text",
+        "padding",
+        "truncate",
+        "align",
+        "ellipsis",
+        "width",
+        "formatting",
+        "terminal",
+        "cli",
+        "console",
+        "ansi",
+        "color"
+    ],
+    "scripts": {
+        "lint": "eslint *.js",
+        "lint-and-test": "npm run lint && npm test",
+        "test": "mocha --reporter ${REPORTER:-progress}",
+        "coverage": "nyc npm test",
+        "travis": "nyc npm run lint-and-test && npm run coveralls",
+        "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    },
+    "devDependencies": {
+        "chalk": "^3.0.0",
+        "coveralls": "^3.0.11",
+        "eslint": "^6.5.1",
+        "mocha": "^7.0.0",
+        "nyc": "^14.1.0",
+        "strip-ansi": "^6.0.0"
+    }
 }
